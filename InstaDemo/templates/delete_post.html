@@ -1,0 +1,22 @@
+{% extends 'nav.html' %}
+{% block content%}
+
+
+<h1>delete post</h1>
+
+<form action="" method="POST">
+<!-- 只有文字所有不需要enctype -->
+    {% csrf_token %}
+    <p>sure?{{object.title}}</p>
+    <button type="submit">Save</button>
+
+
+
+
+
+
+
+
+</form>
+
+{% endblock content %}

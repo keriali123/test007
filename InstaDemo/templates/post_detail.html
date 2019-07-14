@@ -1,2 +1,11 @@
 <p>{{object.title}}</p>
 <img src="http://{{ request.META.HTTP_HOST }}/{{object.image}}"width=600 height=400>
+
+
+<div>
+        <a href="{% url 'update_post' object.id %} ">update_post_title</a>
+        <a href="{% url 'delete_post' object.id %} ">detele_post_title</a>
+
+
+
+</div>
