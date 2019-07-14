@@ -1,0 +1,16 @@
+
+{% load static%}
+<div>
+    {% for post in object_list %}
+        <p>{{post.title}}</p>
+        <!-- <img src="{{ post.image }}" width=600 height=400> -->
+
+        <a href="{% url 'post_detail' post.pk %}">
+            <img src="http://{{ request.META.HTTP_HOST }}/{{post.image.url}}"width=300 height=200>
+
+        </a>
+        <!-- http://{{ request.META.HTTP_HOST }}/{{object.image}} -->
+    {% endfor %}
+
+
+</div>
